@@ -10,7 +10,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="md:w-1/2 flex flex-col gap-4">
               <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-                Yayasan Bina Masyarakat Mandiri
+                Yayasan Bina Mikro Mandiri
               </h1>
               <p className="text-base md:text-lg text-gray-700">
                 Berdaya bersama, tumbuh bersama. Menguatkan UMKM dan komunitas lokal
