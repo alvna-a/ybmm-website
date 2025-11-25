@@ -1,57 +1,31 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
+import Dropdown from "./dropdown";
 
 export default function Navbar() {
-  const [openDropdown, setOpenDropdown] = useState(false);
   const [openMobile, setOpenMobile] = useState(false);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState(false); // <--- MOBILE ONLY
 
   return (
-    <nav className="w-full bg-grey shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="w-full bg-white text-gray-900 shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="text-xl font-semibold">
           YBMM
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-
-          {/* Beranda */}
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex items-center gap-6">
           <Link href="/" className="hover:text-blue-600 transition">
             Beranda
           </Link>
 
-          {/* Tentang Kami + dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setOpenDropdown(!openDropdown)}
-              className="flex items-center gap-1 hover:text-blue-600 transition"
-            >
-              Tentang Kami
-              <span className="text-sm">▼</span>
-            </button>
+          {/* Desktop Dropdown */}
+          <Dropdown />
 
-            {openDropdown && (
-              <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-48">
-                <Link
-                  className="block px-4 py-2 hover:bg-gray-100"
-                  href="/tentang"
-                >
-                  Profil Yayasan
-                </Link>
-                <Link
-                  className="block px-4 py-2 hover:bg-gray-100"
-                  href="/kepengurusan"
-                >
-                  Kepengurusan
-                </Link>
-              </div>
-            )}
-          </div>
-
-          {/* Next menu */}
           <Link href="/program" className="hover:text-blue-600 transition">
             Program
           </Link>
@@ -68,12 +42,10 @@ export default function Navbar() {
             Thunderbird
           </Link>
 
-          {/* ID page */}
           <Link href="/id" className="hover:text-blue-600 transition">
             ID
           </Link>
 
-          {/* Hubungi Kami */}
           <Link
             href="/hubungi-kami"
             className="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition"
@@ -82,7 +54,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile toggle */}
+        {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setOpenMobile(!openMobile)}
           className="md:hidden text-xl"
@@ -91,21 +63,25 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ======================= */}
+      {/*      MOBILE SECTION     */}
+      {/* ======================= */}
+
       {openMobile && (
-        <div className="md:hidden bg-grey border-t shadow-md px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white border-t shadow-md px-6 py-4 flex flex-col gap-4">
 
           <Link href="/" className="hover:text-blue-600">Beranda</Link>
 
+          {/* MOBILE DROPDOWN */}
           <button
-            onClick={() => setOpenDropdown(!openDropdown)}
+            onClick={() => setOpenMobileDropdown(!openMobileDropdown)}
             className="flex items-center gap-2 w-full text-left hover:text-blue-600"
           >
             Tentang Kami
             <span>▼</span>
           </button>
 
-          {openDropdown && (
+          {openMobileDropdown && (
             <div className="ml-4 flex flex-col gap-2">
               <Link href="/tentang" className="hover:text-blue-600">
                 Profil Yayasan
@@ -115,6 +91,7 @@ export default function Navbar() {
               </Link>
             </div>
           )}
+          {/* END MOBILE DROPDOWN */}
 
           <Link href="/program" className="hover:text-blue-600">Program</Link>
           <Link href="/metode" className="hover:text-blue-600">Metode</Link>
