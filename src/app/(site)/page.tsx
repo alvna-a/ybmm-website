@@ -34,7 +34,7 @@ export default function HomePage() {
         <div className="relative max-w-4xl mx-auto rounded-2xl shadow overflow-hidden min-h-[340px] flex items-center justify-center">
           {/* Gambar frame */}
           <Image
-            src="/beranda/atas.jpg"
+            src="/beranda/atas2.jpg"
             alt="Hero"
             fill
             sizes="(max-width: 1152px) 100vw, 1152px"
@@ -42,10 +42,10 @@ export default function HomePage() {
             priority
           />
           {/* Overlay putih semi transparan */}
-          <div className="absolute inset-0 bg-white/90" />
+          <div className="absolute inset-0 bg-white/50" />
           {/* Konten teks dan tombol */}
           <div className="relative z-10 text-center px-4 py-10">
-            <h3 className="text-xs font-semibold text-yellow-600 mb-3 tracking-wide uppercase">
+            <h3 className="text-xs font-semibold text-blue-600 mb-3 tracking-wide uppercase">
               TRANSFORMASI DIGITAL UMKM
             </h3>
             <h1 className="text-3xl md:text-4xl font-bold text-black leading-snug">
@@ -121,21 +121,21 @@ export default function HomePage() {
               alt="Transformasi 1"
               width={300}
               height={160}
-              className="rounded-xl object-cover w-full h-40 bg-gray-200"
+              className="rounded-xl object-cover w-full h-64 bg-gray-200"
             />
             <Image
               src="/beranda/transformasi2.jpg"
               alt="Transformasi 2"
               width={300}
               height={160}
-              className="rounded-xl object-cover w-full h-40 bg-gray-200"
+              className="rounded-xl object-cover w-full h-64 bg-gray-200"
             />
             <Image
               src="/beranda/transformasi3.jpg"
               alt="Transformasi 3"
               width={300}
               height={160}
-              className="rounded-xl object-cover w-full h-40 bg-gray-200"
+              className="rounded-xl object-cover w-full h-64 bg-gray-200"
             />
           </div>
 
