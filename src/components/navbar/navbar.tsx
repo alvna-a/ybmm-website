@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+
+import Image from "next/image";
 import Link from "next/link";
 import Dropdown from "./dropdown";
 
@@ -13,8 +15,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="text-xl font-semibold">
-          YBMM
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/beranda/logo_navbar.png"
+            alt="Logo YBMM"
+            width={120}
+            height={120}
+            className="h-12 w-auto"
+            unoptimized
+          />
         </Link>
 
         {/* DESKTOP MENU */}

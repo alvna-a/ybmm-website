@@ -137,7 +137,7 @@ export default function Pencapaian() {
         </div>
 
         <Image
-          src="/pencapaian/rectangle-287.png"
+          src="/pencapaian/mitra.jpg"
           alt="Collaboration"
           width={445}
           height={359}
