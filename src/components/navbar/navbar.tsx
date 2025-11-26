@@ -17,7 +17,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/beranda/logo_navbar.png"
+            src="/logo_navbar.png"
             alt="Logo YBMM"
             width={120}
             height={120}

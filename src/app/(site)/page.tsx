@@ -1,6 +1,29 @@
 import Image from "next/image";
 
 export default function HomePage() {
+  // Data array for Program Kami section
+  const programList = [
+    {
+      n: "1",
+      title: "Pendampingan Literasi Terkait Legalitas Berusaha",
+      desc: "Membekali UMKM dengan pemahaman legalitas agar usaha dapat berjalan aman, tertata, dan siap dikembangkan."
+    },
+    {
+      n: "2",
+      title: "Pendampingan Literasi Terkait Keuangan, Digital & Perbankan",
+      desc: "Membekali UMKM dengan kemampuan kelola keuangan, pemanfaatan digital, dan akses layanan perbankan."
+    },
+    {
+      n: "3",
+      title: "Pendampingan Pengembangan Usaha & Jaringan Usaha",
+      desc: "Mendukung UMKM memperluas pasar, memperkuat kualitas usaha, dan membangun jejaring bisnis."
+    },
+    {
+      n: "4",
+      title: "Pendidikan Bisnis Global (Thunderbird)",
+      desc: "Memberikan wawasan internasional melalui materi bisnis global yang aplikatif untuk UMKM."
+    },
+  ];
   return (
     <div className="w-full flex flex-col">
 
@@ -149,44 +172,19 @@ export default function HomePage() {
 
         {/* Grid Program */}
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mt-16">
-
-          {[
-            {
-              n: "1",
-              title: "Pendampingan Literasi Terkait Legalitas Berusaha",
-              desc: "Membekali UMKM dengan pemahaman legalitas agar usaha dapat berjalan aman, tertata, dan siap dikembangkan."
-            },
-            {
-              n: "2",
-              title: "Pendampingan Literasi Terkait Keuangan, Digital & Perbankan",
-              desc: "Membekali UMKM dengan kemampuan kelola keuangan, pemanfaatan digital, dan akses layanan perbankan."
-            },
-            {
-              n: "3",
-              title: "Pendampingan Pengembangan Usaha & Jaringan Usaha",
-              desc: "Mendukung UMKM memperluas pasar, memperkuat kualitas usaha, dan membangun jejaring bisnis."
-            },
-            {
-              n: "4",
-              title: "Pendidikan Bisnis Global (Thunderbird)",
-              desc: "Memberikan wawasan internasional melalui materi bisnis global yang aplikatif untuk UMKM."
-            },
-          ].map((item) => (
+          {programList.map((item) => (
             <div
               key={item.n}
-              className="bg-[#D8E9D3] p-6 rounded-xl shadow text-center flex flex-col items-center 
-                        rounded-3xl pt-10 pb-8"
+              className="bg-[#D8E9D3] p-6 rounded-3xl shadow text-center flex flex-col items-center pt-10 pb-8"
             >
               {/* Badge Angka */}
               <div className="bg-white w-12 h-12 flex justify-center items-center rounded-xl shadow mb-5">
                 <p className="text-xl font-bold text-black">{item.n}</p>
               </div>
-
               {/* Judul */}
               <p className="font-semibold text-black text-[15px] leading-snug mb-3 px-2">
                 {item.title}
               </p>
-
               {/* Deskripsi */}
               <p className="text-black/70 text-sm leading-relaxed px-2">
                 {item.desc}
@@ -212,11 +210,10 @@ export default function HomePage() {
         <h2 className="text-2xl md:text-3xl font-bold text-center text-black mb-12">
           Bagaimana Kami Membina UMKM ?
         </h2>
-
         <div className="max-w-6xl mx-auto flex flex-col gap-8">
           {/* Card 1 */}
           <div className="bg-blue-100 rounded-2xl shadow flex flex-col md:flex-row items-center p-6 md:p-8 gap-6">
-            <div className="w-full md:w-1/3 flex-shrink-0">
+            <div className="w-full md:w-1/3 shrink-0">
               <Image
                 src="/metode/tatap_muka.jpg"
                 alt="Tatap Muka"
@@ -238,7 +235,7 @@ export default function HomePage() {
 
           {/* Card 2 */}
           <div className="bg-blue-100 rounded-2xl shadow flex flex-col md:flex-row items-center p-6 md:p-8 gap-6">
-            <div className="w-full md:w-1/3 flex-shrink-0 order-2 md:order-1">
+            <div className="w-full md:w-1/3 shrink-0 order-2 md:order-1">
               <Image
                 src="/metode/seminar_webinar.jpg"
                 alt="Seminar & Webinar"
@@ -260,7 +257,7 @@ export default function HomePage() {
 
           {/* Card 3 */}
           <div className="bg-blue-100 rounded-2xl shadow flex flex-col md:flex-row items-center p-6 md:p-8 gap-6">
-            <div className="w-full md:w-1/3 flex-shrink-0">
+            <div className="w-full md:w-1/3 shrink-0">
               <Image
                 src="/metode/online_learning.jpg"
                 alt="Online Learning"
@@ -398,112 +395,60 @@ export default function HomePage() {
           Identitas dan registrasi lembaga untuk kredibilitas dan kemitraan.
         </p>
 
-        <div className="max-w-4xl mx-auto bg-white p-10 rounded-2xl shadow-sm border border-gray-200">
+        <div className="max-w-4xl mx-auto bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-gray-200">
 
-          {/* Akta Pendirian */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">Akte Pendirian</span>
-            <span className="font-semibold text-black">
-              AHU-0005022.AH.01.12 Tahun 2018, 19th Maret 2018
-            </span>
-          </div>
-          <hr className="border-gray-200" />
+          {/* DATA LIST */}
+          <div className="space-y-6">
+            {[
+              ["Akte Pendirian", "AHU-0005022.AH.01.12 Tahun 2018, 19th Maret 2018"],
+              ["NIB", "1256000550945, 4 Mei 2021"],
+              ["NCAGE", "1480Z, No. 32/II/2024"],
+              ["UEI", "KSQLNPG2753G3"],
+              ["Nomor HP", "+6281 1192 3763"],
+              ["Telepon", "+6211 2934 9582"],
+              ["Fax", "+6211 2934 9301"],
+              ["Email", "yayasanbinamikromandiri@gmail.com"],
+              ["Website", "ybmm.inamikro.id"],
+              ["PB-UMKU", "0220307938170100000001"],
+            ].map(([label, value], i) => (
+              <div key={i}>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                  <span className="text-gray-700 font-medium">{label}</span>
 
-          {/* NIB */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">NIB</span>
-            <span className="font-semibold text-black">
-              1256000550945, 4 Mei 2021
-            </span>
-          </div>
-          <hr className="border-gray-200" />
+                  <span className="font-semibold text-black text-left md:text-right break-words md:max-w-[60%]">
+                    {value}
+                  </span>
+                </div>
+                <hr className="border-gray-200 mt-4" />
+              </div>
+            ))}
 
-          {/* NCAGE */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">NCAGE</span>
-            <span className="font-semibold text-black">
-              1480Z, No. 32/II/2024
-            </span>
-          </div>
-          <hr className="border-gray-200" />
+            {/* SPECIAL — SAM REGISTRATION */}
+            <div>
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
 
-          {/* UEI */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">UEI</span>
-            <span className="font-semibold text-black">
-              KSQLNPG2753G3
-            </span>
-          </div>
-          <hr className="border-gray-200" />
+                <span className="text-gray-700 whitespace-nowrap font-medium">
+                  SAM Registration
+                </span>
 
-          {/* SAM Registration */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">SAM Registration</span>
+                <div className="flex flex-col sm:flex-row gap-3">
 
-            <div className="flex gap-3">
-              <span className="bg-[#FDEFB0] text-black px-4 py-1 rounded-full text-sm flex items-center gap-2">
-                <span className="text-yellow-600">●</span> Aktif
-              </span>
+                  <span className="bg-[#FDEFB0] text-black px-4 py-1 rounded-full text-sm flex items-center gap-2 w-fit">
+                    <span className="text-yellow-600">●</span> Aktif
+                  </span>
 
-              <span className="bg-[#FDEFB0] text-black px-4 py-1 rounded-full text-sm flex items-center gap-2">
-                <span className="text-yellow-600">📅</span> Sampai 10 September 2025
-              </span>
+                  <span className="bg-[#FDEFB0] text-black px-4 py-1 rounded-full text-sm flex items-center gap-2 w-fit">
+                    <span className="text-yellow-600">📅</span> Sampai 10 September 2025
+                  </span>
+
+                </div>
+              </div>
+              <hr className="border-gray-200 mt-4" />
             </div>
-          </div>
-
-          <hr className="border-gray-200" />
-
-          {/* Nomor HP */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">Nomor HP</span>
-            <span className="font-semibold text-black">+6281 1192 3763</span>
-          </div>
-          <hr className="border-gray-200" />
-
-          {/* Telepon */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">Telepon</span>
-            <span className="font-semibold text-black">+6211 2934 9582</span>
-          </div>
-          <hr className="border-gray-200" />
-
-          {/* Fax */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">Fax</span>
-            <span className="font-semibold text-black">+6211 2934 9301</span>
-          </div>
-          <hr className="border-gray-200" />
-
-          {/* Email */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">Email</span>
-            <span className="font-semibold text-black">
-              yayasanbinamikromandiri@gmail.com
-            </span>
-          </div>
-          <hr className="border-gray-200" />
-
-          {/* Website */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">Website</span>
-            <span className="font-semibold text-black">
-              ybmm.inamikro.id
-            </span>
-          </div>
-          <hr className="border-gray-200" />
-
-          {/* PB-UMKU */}
-          <div className="flex justify-between py-3 text-[15px]">
-            <span className="text-gray-700">PB-UMKU</span>
-            <span className="font-semibold text-black">
-              0220307938170100000001
-            </span>
           </div>
 
         </div>
       </section>
-
-
 
     </div>
   );

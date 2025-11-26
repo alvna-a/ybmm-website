@@ -14,7 +14,7 @@ export default function Footer() {
         {/* BRAND */}
         <div className="flex flex-col items-start">
           <img
-            src="/logo-ybmm.png"
+            src="/logo_footer.png"
             alt="Logo YBMM"
             className="w-20 mb-3"
           />
