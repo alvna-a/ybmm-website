@@ -84,7 +84,7 @@ export default function ThunderbirdPage() {
               key={i}
               className="relative bg-white rounded-3xl border border-[#ffc5c5] shadow-[0_8px_20px_-5px_rgba(255,100,100,0.25)] hover:shadow-[0_10px_25px_-5px_rgba(255,80,80,0.35)] transition-all duration-300 w-72 py-10 px-6"
             >
-              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-blue-600 mb-4">
+              <div className="text-4xl font-bold text-transparent bg-clip-text bg-linear-to-b from-blue-400 to-blue-600 mb-4">
                 {item.number}
               </div>
 
