@@ -30,39 +30,52 @@ export default function HomePage() {
       {/* =============================
           HERO
       ============================== */}
-      <section className="w-full bg-[#F5F7FA] py-20 px-6 md:px-12 lg:px-24">
-        <div className="relative max-w-4xl mx-auto rounded-2xl shadow overflow-hidden min-h-[340px] flex items-center justify-center">
-          {/* Gambar frame */}
-          <Image
-            src="/beranda/atas2.jpg"
-            alt="Hero"
-            fill
-            sizes="(max-width: 1152px) 100vw, 1152px"
-            className="object-cover w-full h-full"
-            priority
-          />
-          {/* Overlay putih semi transparan */}
-          <div className="absolute inset-0 bg-white/50" />
-          {/* Konten teks dan tombol */}
-          <div className="relative z-10 text-center px-4 py-10">
-            <h3 className="text-xs font-semibold text-blue-600 mb-3 tracking-wide uppercase">
-              TRANSFORMASI DIGITAL UMKM
-            </h3>
-            <h1 className="text-3xl md:text-4xl font-bold text-black leading-snug">
-              Mendorong UMKM Naik Kelas Lewat Teknologi dan <br />
-              Pendampingan Berkelanjutan.
-            </h1>
-            <div className="flex justify-center gap-4 mt-8">
-              <button className="px-5 py-2 bg-yellow-400 text-black rounded-md shadow text-sm font-semibold">
-                Kenali Yayasan
-              </button>
-              <button className="px-5 py-2 bg-blue-600 text-white rounded-md shadow text-sm font-semibold">
-                Lihat Program Kami
-              </button>
-            </div>
+      <section className="relative w-full h-[420px] md:h-[520px] lg:h-[650px] flex items-center justify-center overflow-hidden">
+
+        {/* Gambar full background */}
+        <Image
+          src="/beranda/atas2.jpg"
+          alt="Hero"
+          fill
+          priority
+          className="object-cover w-full h-full"
+        />
+
+        {/* Overlay gradien:
+            - bawah putih → agar fade seperti contoh
+            - tengah/atas sedikit gelap → agar teks putih terbaca
+        */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.75) 22%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.55) 100%)',
+          }}
+        />
+
+        {/* Konten teks */}
+        <div className="relative z-10 text-center px-6">
+          <h3 className="text-xs font-semibold text-white/90 mb-3 tracking-wide uppercase">
+            TRANSFORMASI DIGITAL UMKM
+          </h3>
+
+          <h1 className="text-3xl md:text-4xl font-bold text-white leading-snug">
+            Mendorong UMKM Naik Kelas Lewat Teknologi dan <br />
+            Pendampingan Berkelanjutan.
+          </h1>
+
+          <div className="flex justify-center gap-4 mt-8">
+            <button className="px-5 py-2 bg-yellow-400 text-black rounded-md shadow text-sm font-semibold">
+              Kenali Yayasan
+            </button>
+            <button className="px-5 py-2 bg-blue-600 text-white rounded-md shadow text-sm font-semibold">
+              Lihat Program Kami
+            </button>
           </div>
         </div>
       </section>
+
+
 
       {/* =============================
           TENTANG KAMI
@@ -415,7 +428,7 @@ export default function HomePage() {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                   <span className="text-gray-700 font-medium">{label}</span>
 
-                  <span className="font-semibold text-black text-left md:text-right break-words md:max-w-[60%]">
+                  <span className="font-semibold text-black text-left md:text-right wrap-break-words md:max-w-[60%]">
                     {value}
                   </span>
                 </div>
