@@ -1,25 +1,46 @@
 "use client";
+import Image from "next/image";
 
 export default function ThunderbirdPage() {
   return (
     <div className="bg-white text-gray-900">
 
       {/* ================= HERO SECTION ================= */}
-      <section
-        className="relative bg-cover bg-center h-[480px] flex items-center"
-        style={{ backgroundImage: "url('/thunderbird/image1.png')" }}
-      >
-        <div className="absolute inset-0 bg-white/30 backdrop-blur-[1px]" />
+      <section className="relative w-full h-[480px] md:h-[580px] lg:h-[650px] flex items-center overflow-hidden">
+
+        {/* Background Image */}
+        <Image
+          src="/thunderbird/hero.jpg"
+          alt="Thunderbird Hero"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+
+        {/* Gradient Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.75) 22%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.55) 100%)",
+          }}
+        />
+
+        {/* Konten */}
         <div className="relative z-10 w-full">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-3xl ml-7">
-              <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                 Thunderbird – Tempat Inovasi <br /> Berkembang dengan Cepat
               </h1>
-              <p className="text-gray-700 mt-3 text-lg">
+
+              {/* Perbaikan: pakai text-white/90 atau text-gray-200, bukan text-white-700 */}
+              <p className="text-white/90 mt-3 text-lg">
                 Kekuatan, gerak, dan kecerdasan menyatu menjadi platform premium yang
                 dirancang untuk transformasi cepat.
               </p>
+
               <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition">
                 Baca Selengkapnya
               </button>
@@ -109,14 +130,30 @@ export default function ThunderbirdPage() {
         </div>
 
         <div className="flex justify-center gap-6 mt-10 flex-wrap">
-          {["Daftar Disini", "Press Release", "Akses Course"].map((btn, i) => (
-            <button
-              key={i}
-              className="px-8 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition"
+            <a
+              href="https://www.100millionlearners.org/id/register-info/?partner=Inamikro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition inline-block"
             >
-              {btn}
-            </button>
-          ))}
+              Daftar Disini
+            </a>
+            <a
+              href="https://thunderbird.asu.edu/about"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition inline-block"
+            >
+              Press Release
+            </a>
+            <a
+              href="https://www.100millionlearners.org/id/portal/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition inline-block"
+            >
+              Akses Course
+            </a>
         </div>
       </section>
 

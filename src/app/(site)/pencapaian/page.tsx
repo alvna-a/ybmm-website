@@ -7,20 +7,22 @@ export default function Pencapaian() {
       {/* Hero Section */}
       <div className="relative w-full h-[350px] md:h-[500px] lg:h-[676px] overflow-hidden">
         <Image
-          src="/pencapaian/hero1.png"
+          src="/pencapaian/hero3.JPG"
           alt="Hero Background"
           fill
           className="object-cover"
         />
 
-        {/* Gradient fade bottom */}
-        <div className="absolute inset-0 bg-linear-to-t from-white via-white/40 to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
 
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 text-center w-[85%] sm:w-[70%] lg:w-[60%]">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black">
+        {/* Gradient fade bottom */}
+        <div className="absolute inset-0 bg-linear-to-t from-white via-white/1 to-transparent pointer-events-none"></div>
+
+        <div className="absolute top-2/5 left-1/2 -translate-x-1/2 text-center w-[85%] sm:w-[70%] lg:w-[60%]">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white uppercase">
             Pencapaian YBMM
           </h1>
-          <p className="text-sm sm:text-base lg:text-lg mt-4 text-black">
+          <p className="text-sm sm:text-bold lg:text-lg mt-4 text-white uppercase">
             Perjalanan nyata dalam mendampingi UMKM untuk tumbuh lebih tertata,
             lebih kompeten, dan lebih siap menghadapi pasar modern.
           </p>
@@ -182,7 +184,6 @@ export default function Pencapaian() {
         <Link href="/metode">
           <button className="mt-8 sm:mt-10 bg-[#FFD54F] px-6 sm:px-8 py-3 rounded-full flex items-center gap-3 sm:gap-4 font-semibold text-black text-base sm:text-lg mx-auto">
             Pelajari metode kami
-            <span className="text-xl sm:text-2xl font-bold">{">"}</span>
           </button>
         </Link>
       </div>
