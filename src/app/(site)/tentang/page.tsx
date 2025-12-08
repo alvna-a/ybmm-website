@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 const TentangKamiPage = () => {
   return (
@@ -56,12 +57,16 @@ const TentangKamiPage = () => {
 
         {/* BUTTONS DIPINDAH KE SINI BIAR CENTER */}
         <div className="flex justify-center gap-4 mt-10">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">
-            Lihat Struktur Kepengurusan
-          </button>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">
-            Lihat Program Kami
-          </button>
+          <Link href="/kepengurusan">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">
+              Lihat Struktur Kepengurusan
+            </button>
+          </Link>
+          <Link href="/program">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">
+              Lihat Program Kami
+            </button>
+          </Link>
         </div>
       </section>
 

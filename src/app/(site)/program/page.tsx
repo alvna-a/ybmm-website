@@ -6,9 +6,10 @@ export default function ProgramPage() {
         className="
           w-full
           bg-none           
-          lg:bg-[url('/headerprogram.png')] 
+          lg:bg-[url('/program/hero.jpg')] 
           lg:bg-no-repeat 
-          lg:bg-right
+          lg:bg-center
+          lg:bg-cover
 
           pt-20 pb-28
           lg:min-h-[500px]
