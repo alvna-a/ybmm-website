@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
   // Data array for Program Kami section
@@ -65,12 +66,16 @@ export default function HomePage() {
           </h1>
 
           <div className="flex justify-center gap-4 mt-8">
-            <button className="px-5 py-2 bg-yellow-400 text-black rounded-md shadow text-sm font-semibold">
-              Kenali Yayasan
-            </button>
-            <button className="px-5 py-2 bg-blue-600 text-white rounded-md shadow text-sm font-semibold">
-              Lihat Program Kami
-            </button>
+            <Link href="/tentang">
+              <button className="px-5 py-2 bg-yellow-400 text-black rounded-md shadow text-sm font-semibold">
+                Kenali Yayasan
+              </button>
+            </Link>
+            <Link href="/program">
+              <button className="px-5 py-2 bg-blue-600 text-white rounded-md shadow text-sm font-semibold">
+                Lihat Program Kami
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -208,9 +213,11 @@ export default function HomePage() {
 
         {/* Tombol Lihat Semua */}
         <div className="flex justify-center mt-14">
-          <button className="flex items-center gap-2 px-6 py-3 bg-yellow-400 rounded-full text-sm font-semibold shadow">
-            <span className="text-black">Lihat semua  detail program</span>
-          </button>
+          <Link href="/program">
+            <button className="flex items-center gap-2 px-6 py-3 bg-yellow-400 rounded-full text-sm font-semibold shadow">
+              <span className="text-black">Lihat semua  detail program</span>
+            </button>
+          </Link>
         </div>
 
       </section>
@@ -241,7 +248,9 @@ export default function HomePage() {
                 Pendampingan langsung dan personal di lapangan untuk membantu UMKM menyelesaikan tantangan, memahami kondisi usaha, dan mendapatkan arahan yang tepat.
               </p>
               <div>
-                <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 py-2 rounded-md text-sm mt-2">Baca selengkapnya</button>
+                <Link href="/metode">
+                  <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 py-2 rounded-md text-sm mt-2">Baca selengkapnya</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -263,7 +272,9 @@ export default function HomePage() {
                 Sesi berbagi insight dan inspirasi dari para ahli, dirancang untuk memperluas wawasan, jaringan, serta memberikan pemahaman praktis yang relevan bagi UMKM.
               </p>
               <div>
-                <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 py-2 rounded-md text-sm mt-2">Baca selengkapnya</button>
+                <Link href="/metode">
+                  <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 py-2 rounded-md text-sm mt-2">Baca selengkapnya</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -285,7 +296,9 @@ export default function HomePage() {
                 Akses belajar fleksibel melalui materi dan kelas online yang bisa dibuka kapan saja, sehingga pelaku UMKM tetap bisa belajar tanpa mengganggu aktivitas usaha harian.
               </p>
               <div>
-                <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 py-2 rounded-md text-sm mt-2">Baca selengkapnya</button>
+                <Link href="/metode">
+                  <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 py-2 rounded-md text-sm mt-2">Baca selengkapnya</button>
+                </Link>
               </div>
             </div>
           </div>

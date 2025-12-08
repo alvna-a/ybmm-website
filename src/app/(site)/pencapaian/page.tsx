@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Pencapaian() {
   return (
@@ -178,10 +179,12 @@ export default function Pencapaian() {
           keberlanjutan usaha.
         </p>
 
-        <button className="mt-8 sm:mt-10 bg-[#FFD54F] px-6 sm:px-8 py-3 rounded-full flex items-center gap-3 sm:gap-4 font-semibold text-black text-base sm:text-lg mx-auto">
-          Pelajari metode kami
-          <span className="text-xl sm:text-2xl font-bold">{">"}</span>
-        </button>
+        <Link href="/metode">
+          <button className="mt-8 sm:mt-10 bg-[#FFD54F] px-6 sm:px-8 py-3 rounded-full flex items-center gap-3 sm:gap-4 font-semibold text-black text-base sm:text-lg mx-auto">
+            Pelajari metode kami
+            <span className="text-xl sm:text-2xl font-bold">{">"}</span>
+          </button>
+        </Link>
       </div>
     </div>
   );

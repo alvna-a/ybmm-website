@@ -21,8 +21,8 @@ export default function Metode() {
         {/* Image */}
         <div className="flex justify-center md:justify-end">
           <img
-            src="/webinar.png"
-            alt="Webinar"
+            src="/metode/hero.jpg"
+            alt="Hero Metode"
             className="w-[340px] md:w-[420px] lg:w-[460px] rounded-xl object-cover"
           />
         </div>
@@ -32,7 +32,7 @@ export default function Metode() {
       {/* Metode 01 */}
       <div className="mt-24 bg-blue-100 p-6 md:p-10 rounded-3xl flex flex-col md:flex-row items-center gap-10">
         <img
-          src="/metode1.png"
+          src="/metode/tatap_muka.jpg"
           alt="Tatap Muka"
           className="w-[380px] md:w-[420px] lg:w-[480px] rounded-xl object-cover"
         />
@@ -65,8 +65,8 @@ export default function Metode() {
           </p>
         </div>
         <img
-          src="/metode1.png"
-          alt="Tatap Muka"
+          src="/metode/seminar_webinar.jpg"
+          alt="Seminar"
           className="w-[380px] md:w-[420px] lg:w-[480px] rounded-xl object-cover"
         />
       </div>
@@ -74,8 +74,8 @@ export default function Metode() {
       {/* Metode 03 */}
       <div className="mt-24 bg-blue-100 p-6 md:p-10 rounded-3xl flex flex-col md:flex-row items-center gap-10">
         <img
-          src="/metode1.png"
-          alt="Tatap Muka"
+          src="/metode/online_learning.jpg"
+          alt="Online"
           className="w-[380px] md:w-[420px] lg:w-[480px] rounded-xl object-cover"
         />
 
