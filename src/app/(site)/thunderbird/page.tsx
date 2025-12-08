@@ -41,9 +41,14 @@ export default function ThunderbirdPage() {
                 dirancang untuk transformasi cepat.
               </p>
 
-              <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition">
+              <a
+                href="https://thunderbird.asu.edu/about"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition inline-block"
+              >
                 Baca Selengkapnya
-              </button>
+              </a>
             </div>
           </div>
         </div>
