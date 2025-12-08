@@ -4,13 +4,16 @@ export default function Pencapaian() {
   return (
     <div className="w-full bg-white">
       {/* Hero Section */}
-      <div className="relative w-full h-[350px] md:h-[500px] lg:h-[676px]">
+      <div className="relative w-full h-[350px] md:h-[500px] lg:h-[676px] overflow-hidden">
         <Image
-          src="/pencapaian/rectangle-286.png"
+          src="/pencapaian/hero1.png"
           alt="Hero Background"
           fill
           className="object-cover"
         />
+
+        {/* Gradient fade bottom */}
+        <div className="absolute inset-0 bg-linear-to-t from-white via-white/40 to-transparent pointer-events-none"></div>
 
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 text-center w-[85%] sm:w-[70%] lg:w-[60%]">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black">
