@@ -12,19 +12,21 @@ const TentangKamiPage = () => {
           Tentang Kami
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
           {/* IMAGE */}
-          <Image
-            src="/tentang/tentang_kami.jpg"
-            alt="Tentang Kami"
-            width={500}
-            height={350}
-            className="rounded-xl max-w-[420px] h-[350px] object-cover mx-auto"
-          />
+          <div className="flex justify-center mb-6 md:mb-0">
+            <Image
+              src="/tentang/tentang_kami.jpg"
+              alt="Tentang Kami"
+              width={350}
+              height={220}
+              className="rounded-xl w-full max-w-[320px] sm:max-w-[420px] h-[220px] sm:h-[350px] object-cover"
+            />
+          </div>
 
           {/* CONTENT */}
           <div className="space-y-6">
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed text-base sm:text-[17px] text-justify sm:text-left">
               Yayasan Bina Mikro Mandiri (YBMM) merupakan lembaga nirlaba yang
               berkomitmen memperkuat kapasitas pelaku UMKM di Indonesia melalui
               program pemberdayaan yang terstruktur dan berkelanjutan. Kami
