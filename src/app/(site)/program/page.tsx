@@ -25,7 +25,7 @@ export default function ProgramPage() {
           </h2>
 
           <p className="text-gray-600 mt-4 leading-relaxed max-w-xl">
-            MMelalui empat program utama, YBMM berkomitmen untuk memberikan pendampingan yang relevan, praktis, dan berdampak bagi UMKM. Setiap program dirancang untuk memperkuat kapasitas pelaku usaha, mulai dari pengetahuan dasar, strategi pengembangan, hingga penerapan praktik terbaik dalam menjalankan bisnis.
+            Melalui empat program utama, YBMM berkomitmen untuk memberikan pendampingan yang relevan, praktis, dan berdampak bagi UMKM. Setiap program dirancang untuk memperkuat kapasitas pelaku usaha, mulai dari pengetahuan dasar, strategi pengembangan, hingga penerapan praktik terbaik dalam menjalankan bisnis.
           </p>
         </div>
       </section>
