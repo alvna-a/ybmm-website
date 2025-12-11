@@ -32,12 +32,12 @@ const members: Member[] = [
   {
     name: "Akhmad Fadly",
     role: "Pembina 1",
-    image: "/kepengurusan/fadly.png",
+    image: "/kepengurusan/akhmad.jpg",
   },
   {
     name: "Dr. Lawrence TP Siburian, SH, MH, LLM",
     role: "Pembina 2",
-    image: "/kepengurusan/lawrence.png",
+    image: "/kepengurusan/lawrence.jpg",
   },
   {
     name: "Yudha Mei Lukmana",
