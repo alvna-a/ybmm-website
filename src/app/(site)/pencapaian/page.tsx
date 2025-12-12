@@ -46,20 +46,20 @@ export default function Pencapaian() {
  
            {[
              {
-               number: "Sejak 2018",
-               label: "Pendampingan UMKM",
+               number: "182.000+",
+               label: "Anggota Komunitas Perkumpulan INAmikro",
                icon: "/pencapaian/ell.png",
                icon2: "/pencapaian/1.png",
              },
              {
-               number: "21.664+",
-               label: "Total Pedagang",
+               number: "22.257+",
+               label: "Jumlah UMKM Yang Sudah Dibina",
                icon: "/pencapaian/ell.png",
                icon2: "/pencapaian/1.png",
              },
              {
-               number: "753+",
-               label: "Pembuatan Rekening",
+               number: "300+",
+               label: "Workshop (2025-Sekarang)",
                icon: "/pencapaian/ell.png",
                icon2: "/pencapaian/1.png",
              },
@@ -70,44 +70,52 @@ export default function Pencapaian() {
                icon2: "/pencapaian/1.png",
              },
              {
-               number: "20.205+",
+               number: "20.973+",
                label: "Pelatihan Literasi Legal Usaha",
                icon: "/pencapaian/ell.png",
                icon2: "/pencapaian/1.png",
              },
              {
-               number: "1400+",
+               number: "753+",
+               label: "Pembuatan Rekening",
+               icon: "/pencapaian/ell.png",
+               icon2: "/pencapaian/1.png",
+             },
+             {
+               number: "1.400+",
                label: "Penyaluran Kredit Mikro",
                icon: "/pencapaian/ell.png",
                icon2: "/pencapaian/1.png",
              },
              {
                number: "765+",
-               label: "Pelatihan Digital Payment / QRIS",
+               label: "Pelatihan QRIS",
                icon: "/pencapaian/ell.png",
                icon2: "/pencapaian/1.png",
              },
              {
                number: "547+",
-               label: "Pelatihan E-logistic & E-commerce",
+               label: "Pelatihan e-Commerce dan e-Logistic",
                icon: "/pencapaian/ell.png",
                icon2: "/pencapaian/1.png",
              },
              {
-               number: "235+",
-               label: "Branding Usaha, Company Profile",
+               number: "287+",
+               label: "Branding Usaha & Company Profile",
                icon: "/pencapaian/ell.png",
                icon2: "/pencapaian/1.png",
              },
-           ].map((item, i) => (
+           ].map((item, i, arr) => (
              <div
                key={i}
-               className="bg-[#ffd54f80] border border-black/15 rounded-[25px] h-[120px] p-5 relative"
+              className={`bg-[#ffd54f80] border border-black/15 rounded-[25px] h-[120px] p-5 relative
+                ${i === arr.length - 1 ? "md:col-start-2" : ""}
+              `}
              >
                <div className="flex items-start gap-4">
                  
                  {/* Icon Section */}
-                 <div className="w-[54px] h-[54px] bg-[#2D8FE4] rounded-full flex items-center justify-center">
+                 <div className="shrink-0 w-[54px] h-[54px] bg-[#2D8FE4] rounded-full flex items-center justify-center">
                    <div className="relative w-[30px] h-[30px]">
                      <Image src={item.icon} alt="icon" fill className="scale-150" />
                      <Image src={item.icon2} alt="icon2" fill className="scale-100" />
