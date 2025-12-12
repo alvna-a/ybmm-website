@@ -51,9 +51,9 @@ export default function Navbar() {
             Thunderbird
           </Link>
 
-          <Link href="/id" className="hover:text-blue-600 transition">
+          {/* <Link href="/id" className="hover:text-blue-600 transition">
             ID
-          </Link>
+          </Link> */}
 
           <Link
             href="/hubungi-kami"
@@ -105,7 +105,7 @@ export default function Navbar() {
           <Link href="/metode" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>Metode</Link>
           <Link href="/pencapaian" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>Pencapaian</Link>
           <Link href="/thunderbird" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>Thunderbird</Link>
-          <Link href="/id" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>ID</Link>
+          {/* <Link href="/id" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>ID</Link> */}
 
           <Link
             href="/hubungi-kami"
