@@ -78,8 +78,7 @@ export default function Navbar() {
 
       {openMobile && (
         <div className="md:hidden bg-white border-t shadow-md px-6 py-4 flex flex-col gap-4">
-
-          <Link href="/" className="hover:text-blue-600">Beranda</Link>
+          <Link href="/" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>Beranda</Link>
 
           {/* MOBILE DROPDOWN */}
           <button
@@ -92,25 +91,26 @@ export default function Navbar() {
 
           {openMobileDropdown && (
             <div className="ml-4 flex flex-col gap-2">
-              <Link href="/tentang" className="hover:text-blue-600">
+              <Link href="/tentang" className="hover:text-blue-600" onClick={() => { setOpenMobile(false); setOpenMobileDropdown(false); }}>
                 Profil Yayasan
               </Link>
-              <Link href="/kepengurusan" className="hover:text-blue-600">
+              <Link href="/kepengurusan" className="hover:text-blue-600" onClick={() => { setOpenMobile(false); setOpenMobileDropdown(false); }}>
                 Kepengurusan
               </Link>
             </div>
           )}
           {/* END MOBILE DROPDOWN */}
 
-          <Link href="/program" className="hover:text-blue-600">Program</Link>
-          <Link href="/metode" className="hover:text-blue-600">Metode</Link>
-          <Link href="/pencapaian" className="hover:text-blue-600">Pencapaian</Link>
-          <Link href="/thunderbird" className="hover:text-blue-600">Thunderbird</Link>
-          <Link href="/id" className="hover:text-blue-600">ID</Link>
+          <Link href="/program" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>Program</Link>
+          <Link href="/metode" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>Metode</Link>
+          <Link href="/pencapaian" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>Pencapaian</Link>
+          <Link href="/thunderbird" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>Thunderbird</Link>
+          <Link href="/id" className="hover:text-blue-600" onClick={() => setOpenMobile(false)}>ID</Link>
 
           <Link
             href="/hubungi-kami"
             className="px-4 py-2 rounded-md bg-blue-600 text-white text-center"
+            onClick={() => setOpenMobile(false)}
           >
             Hubungi Kami
           </Link>
